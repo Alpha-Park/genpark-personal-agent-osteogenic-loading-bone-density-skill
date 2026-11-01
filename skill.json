@@ -1,0 +1,26 @@
+{
+  "name": "genpark-personal-agent-osteogenic-loading-bone-density-skill",
+  "version": "1.0.0",
+  "description": "Calculates Mechanotransduction Osteogenic Index (MOI), evaluates 4.2x BW ground reaction force mechanostat threshold, and prescribes bone remodeling loading protocols.",
+  "tools": [
+    {
+      "name": "evaluate_osteogenic_stimulus",
+      "description": "Calculates Mechanotransduction Osteogenic Index (MOI) and evaluates 4.2x BW mechanostat threshold.",
+      "parameters": {
+        "exercise_type": "string (default 'depth_jump_landing')",
+        "bodyweight_kg": "float (default 70.0)",
+        "custom_grf_multiple": "float (default 5.2)",
+        "repetition_cycles": "int (default 24)"
+      }
+    },
+    {
+      "name": "prescribe_weekly_bone_density_protocol",
+      "description": "Prescribes mechanical loading protocol based on DEXA T-Score and age.",
+      "parameters": {
+        "age": "int (default 42)",
+        "t_score": "float (default -1.2)",
+        "current_activity_level": "string (default 'moderate')"
+      }
+    }
+  ]
+}
